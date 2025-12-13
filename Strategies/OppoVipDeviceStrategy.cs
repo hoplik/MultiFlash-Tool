@@ -56,11 +56,8 @@ namespace OPFlashTool.Strategies
             return Task.FromResult(client.PerformVipAuth(finalDigest, finalSig));
         }
 
-        // [核心逻辑] OPPO 专用的伪装读取策略 (参考项目逻辑)
-        // 参考项目 VIP 模式动态策略:
-        // - 某些设备禁止访问 BackupGPT (如 SM8550)
-        // - 某些设备禁止访问 PrimaryGPT
-        // - 策略: 第一次尝试 PrimaryGPT，失败重试时尝试 BackupGPT
+        // [核心逻辑] OPPO 专用的伪装读取策略 (参考项目完整 Waterfall Strategy)
+        // 参考项目 VIP 模式使用多重伪装策略，按顺序尝试直到成功
         public override async Task<List<PartitionInfo>> ReadGptAsync(FirehoseClient client, CancellationToken ct, Action<string> log)
         {
             var allPartitions = new List<PartitionInfo>();
@@ -71,7 +68,20 @@ namespace OPFlashTool.Strategies
             const int sectorsToRead = 6;
             int lunRead = 0;
 
-            log("[Info] 开始读取分区表...");
+            // 参考项目完整的伪装策略列表 (Waterfall Strategy)
+            var spoofStrategies = new (string label, string filename)[]
+            {
+                ("PrimaryGPT", "gpt_main{lun}.bin"),      // 策略 1: 主表
+                ("BackupGPT", "gpt_main{lun}.bin"),       // 策略 2: 备份标签+主表文件名
+                ("BackupGPT", "gpt_backup{lun}.bin"),     // 策略 3: 备份标签+备份文件名
+                ("gpt_backup0.bin", "gpt_backup0.bin"),   // 策略 4: 全伪装 (备份)
+                ("gpt_main0.bin", "gpt_main0.bin"),       // 策略 5: 全伪装 (主表)
+                ("ssd", "ssd"),                           // 策略 6: 通用伪装
+                ("super", "super"),                       // 策略 7: 超级伪装
+                ("userdata", "userdata"),                 // 策略 8: 用户数据伪装
+            };
+
+            log("[Info] 开始读取分区表 (Waterfall Strategy)...");
 
             for (int lun = 0; lun <= maxLun; lun++)
             {
@@ -80,40 +90,35 @@ namespace OPFlashTool.Strategies
                 byte[]? data = null;
                 bool success = false;
 
-                // 参考项目: 2 次重试机制 + 动态标签策略
-                for (int retry = 0; retry < 2; retry++)
+                // 遍历所有伪装策略
+                foreach (var (label, filenameTemplate) in spoofStrategies)
                 {
+                    if (success) break;
+                    
                     try 
                     {
-                        // 参考项目 VIP 模式动态策略:
-                        // 第一次尝试 PrimaryGPT，失败重试时尝试 BackupGPT
-                        string label = (retry == 0) ? "PrimaryGPT" : "BackupGPT";
+                        string filename = filenameTemplate.Replace("{lun}", lun.ToString());
                         
                         data = await client.ReadGptPacketAsync(
                             lun.ToString(), 
                             0, 
                             sectorsToRead, 
                             label, 
-                            $"gpt_main{lun}.bin", 
+                            filename, 
                             ct
                         );
 
                         if (data != null && data.Length > 0)
                         {
                             success = true;
-                            break; // 成功则跳出重试
+                            log($"[Debug] LUN{lun}: 策略 [{label}+{filename}] 成功");
+                            break;
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        log($"[Debug] LUN{lun} 读取异常: {ex.Message}");
-                    }
+                    catch { }
                     
-                    // 失败等待后重试 (参考项目: Thread.Sleep(300))
-                    if (!success && retry == 0) 
-                    {
-                        await Task.Delay(300);
-                    }
+                    // 策略失败，短暂等待后尝试下一个
+                    await Task.Delay(100);
                 }
 
                 if (success && data != null)
