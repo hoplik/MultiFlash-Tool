@@ -184,8 +184,25 @@ If this project helps you, please give it a Star ⭐
 
 ## 📧 Contact
 
-- **Issues**: [GitHub Issues](../../issues)
+### Issue Reporting
+- **Bug Report**: [GitHub Issues](../../issues/new?template=bug_report.md)
+- **Feature Request**: [GitHub Issues](../../issues/new?template=feature_request.md)
 - **Discussions**: [GitHub Discussions](../../discussions)
+
+### Community
+- **QQ Group**: [Join Group](https://qm.qq.com/q/your-qq-group) <!-- Replace with actual QQ group link -->
+- **Telegram**: [Join Channel](https://t.me/multiflash_tool) <!-- Replace with actual Telegram link -->
+- **Discord**: [Join Server](https://discord.gg/your-invite) <!-- Replace with actual Discord link -->
+
+### Developer Contact
+- **Maintainer**: [@xiriovo](https://github.com/xiriovo)
+- **Email**: multiflash.tool@example.com <!-- Replace with actual email -->
+
+### Follow Us
+- **GitHub**: [Star this project](https://github.com/xiriovo/MultiFlash-Tool)
+- **Gitee Mirror**: [China Mirror](https://gitee.com/xiriovo/MultiFlash-Tool) <!-- Uncomment if mirror exists -->
+
+> 💡 **Tip**: Please check [FAQ](#faq) and [existing Issues](../../issues) before asking questions
 
 ---
 

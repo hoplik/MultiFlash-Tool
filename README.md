@@ -184,8 +184,25 @@
 
 ## 📧 联系方式
 
-- **Issues**: [GitHub Issues](../../issues)
-- **Discussions**: [GitHub Discussions](../../discussions)
+### 问题反馈
+- **Bug 报告**: [GitHub Issues](../../issues/new?template=bug_report.md)
+- **功能建议**: [GitHub Issues](../../issues/new?template=feature_request.md)
+- **问题讨论**: [GitHub Discussions](../../discussions)
+
+### 社区交流
+- **QQ 群**: [点击加入](https://qm.qq.com/q/your-qq-group) <!-- 请替换为实际的 QQ 群链接 -->
+- **Telegram**: [加入频道](https://t.me/multiflash_tool) <!-- 请替换为实际的 Telegram 链接 -->
+- **Discord**: [加入服务器](https://discord.gg/your-invite) <!-- 请替换为实际的 Discord 链接 -->
+
+### 开发者联系
+- **项目维护者**: [@xiriovo](https://github.com/xiriovo)
+- **邮箱**: multiflash.tool@example.com <!-- 请替换为实际邮箱 -->
+
+### 关注我们
+- **GitHub**: [Star 本项目](https://github.com/xiriovo/MultiFlash-Tool)
+- **Gitee 镜像**: [国内镜像](https://gitee.com/xiriovo/MultiFlash-Tool) <!-- 如有镜像请取消注释 -->
+
+> 💡 **提示**: 提问前请先查看 [常见问题](#常见问题) 和 [已有 Issues](../../issues)
 
 ---
 
