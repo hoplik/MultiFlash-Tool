@@ -190,7 +190,7 @@ If this project helps you, please give it a Star ⭐
 - **Discussions**: [GitHub Discussions](../../discussions)
 
 ### Community
-- **QQ Group**: [Join Group](https://qm.qq.com/q/your-qq-group) <!-- Replace with actual QQ group link -->
+- **QQ Group**: [MultiFlash TOOL](https://qm.qq.com/q/oCwGmTm5a2)
 - **Telegram**: [Join Channel](https://t.me/multiflash_tool) <!-- Replace with actual Telegram link -->
 - **Discord**: [Join Server](https://discord.gg/your-invite) <!-- Replace with actual Discord link -->
 

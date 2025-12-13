@@ -190,7 +190,7 @@
 - **问题讨论**: [GitHub Discussions](../../discussions)
 
 ### 社区交流
-- **QQ 群**: [点击加入](https://qm.qq.com/q/your-qq-group) <!-- 请替换为实际的 QQ 群链接 -->
+- **QQ 群**: [MultiFlash TOOL](https://qm.qq.com/q/oCwGmTm5a2)
 - **Telegram**: [加入频道](https://t.me/multiflash_tool) <!-- 请替换为实际的 Telegram 链接 -->
 - **Discord**: [加入服务器](https://discord.gg/your-invite) <!-- 请替换为实际的 Discord 链接 -->
 

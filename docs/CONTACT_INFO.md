@@ -19,8 +19,8 @@
 - **功能建议**: https://github.com/xiriovo/MultiFlash-Tool/issues/new?template=feature_request.md
 
 ### 社区平台
-- **QQ 群**: `待添加` <!-- 格式: 群号 123456789 -->
-- **QQ 群链接**: `待添加` <!-- 格式: https://qm.qq.com/q/xxxxx -->
+- **QQ 群**: `MultiFlash TOOL`
+- **QQ 群链接**: https://qm.qq.com/q/oCwGmTm5a2
 - **Telegram**: `待添加` <!-- 格式: https://t.me/multiflash_tool -->
 - **Discord**: `待添加` <!-- 格式: https://discord.gg/xxxxx -->
 - **微信公众号**: `待添加` <!-- 如有 -->
@@ -52,7 +52,11 @@
 
 ## 🔄 更新记录
 
-### 2024-12-13
+### 2024-12-13 16:02
+- 添加 QQ 群链接：https://qm.qq.com/q/oCwGmTm5a2
+- QQ 群名称：MultiFlash TOOL
+
+### 2024-12-13 15:50
 - 初始化联系方式配置文件
 - 添加多种联系渠道占位符
 - 在 README 中添加详细的联系方式分类
