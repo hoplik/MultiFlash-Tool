@@ -26,16 +26,16 @@
 
 ## 📑 目录
 
-- [许可声明](#许可声明)
-- [功能特性](#功能特性)
-- [系统要求](#系统要求)
-- [快速开始](#快速开始)
-- [文档](#文档)
-- [技术栈](#技术栈)
-- [常见问题](#常见问题)
-- [贡献](#贡献)
-- [许可证](#许可证)
-- [联系方式](#联系方式)
+- [许可声明](#license-notice)
+- [功能特性](#features)
+- [系统要求](#requirements)
+- [快速开始](#quick-start)
+- [文档](#documentation)
+- [技术栈](#tech-stack)
+- [常见问题](#faq)
+- [贡献](#contributing)
+- [许可证](#license)
+- [联系方式](#contact)
 
 ## 🎯 项目亮点
 
@@ -71,6 +71,7 @@
   <p><i>MultiFlash Tool 主界面</i></p>
 </div>
 
+<a id="license-notice"></a>
 ## ⚠️ 许可声明
 
 本项目采用 **非商业许可**，**禁止任何形式的商业用途**。
@@ -81,6 +82,7 @@
 - ✅ 自由学习和研究
 - ✅ 可修改和分发（需保持相同限制）
 
+<a id="features"></a>
 ## ✨ 功能特性
 
 ### 核心功能
@@ -116,6 +118,7 @@
 - 🌐 **多语言支持** - 中文界面
 - 🎨 **现代 UI** - 基于 AntdUI 框架
 
+<a id="requirements"></a>
 ## 📋 系统要求
 
 ### 最低配置
@@ -129,6 +132,7 @@
 - **ADB 驱动**: 用于 ADB 调试
 - **Fastboot 驱动**: 用于 Fastboot 模式
 
+<a id="quick-start"></a>
 ## 🚀 快速开始
 
 ### 安装步骤
@@ -169,6 +173,7 @@
 2. 选择输出目录
 3. 点击"提取 Payload"
 
+<a id="documentation"></a>
 ## 📚 文档
 
 ### 核心文档
@@ -182,6 +187,7 @@
 - **[截图和演示](docs/SCREENSHOTS.md)** - 界面预览和视频教程
 - **[文档改进记录](docs/DOCUMENTATION_IMPROVEMENTS.md)** - 文档完善历史
 
+<a id="contributing"></a>
 ## 🤝 贡献
 
 欢迎提交 Issue 和 Pull Request！
@@ -195,6 +201,7 @@
 
 详见 [CONTRIBUTING.md](CONTRIBUTING.md) 了解完整的贡献指南。
 
+<a id="tech-stack"></a>
 ## 🛠️ 技术栈
 
 - **UI 框架**: [AntdUI](https://gitee.com/antdui/AntdUI) 2.2.1
@@ -203,6 +210,7 @@
 - **Protobuf**: Google.Protobuf 3.17.3
 - **加密**: Fody / Costura
 
+<a id="faq"></a>
 ## ❓ 常见问题
 
 ### 设备无法识别？
@@ -230,6 +238,7 @@
 
 **开发者不对任何因使用本工具造成的损失负责。**
 
+<a id="license"></a>
 ## 📄 许可证
 
 本项目采用 **非商业许可证** - 详见 [LICENSE](LICENSE) 文件
@@ -243,6 +252,7 @@
 
 如果这个项目对你有帮助，请给个 Star ⭐
 
+<a id="contact"></a>
 ## 📧 联系方式
 
 ### 问题反馈
@@ -291,5 +301,5 @@
 <div align="center">
   Made with ❤️ by MultiFlash Tool Team
   <br>
-  Copyright © 2024 MultiFlash Tool. All rights reserved.
+  Copyright © 2025 MultiFlash Tool. All rights reserved.
 </div>
