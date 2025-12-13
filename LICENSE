@@ -1,56 +1,66 @@
-MULTIFLASH TOOL NON-COMMERCIAL LICENSE
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+(CC BY-NC-SA 4.0)
 
-Version 1.0, 2024
+Copyright (c) 2025 MultiFlash Tool Team (xiriovo, Love-suannai)
 
-Copyright (c) 2024 MultiFlash Tool Contributors
+================================================================================
 
-TERMS AND CONDITIONS
+You are free to:
 
-1. DEFINITIONS
+  * Share — copy and redistribute the material in any medium or format
+  * Adapt — remix, transform, and build upon the material
 
-   "Software" refers to MultiFlash Tool and all associated source code,
-   documentation, and related materials.
-   
-   "Commercial Use" means any use of the Software that is primarily 
-   intended for or directed toward commercial advantage or monetary 
-   compensation. This includes but is not limited to:
-   - Selling the Software or any derivative works
-   - Using the Software in a commercial product or service
-   - Using the Software to provide paid services
-   - Integrating the Software into commercial offerings
+Under the following terms:
 
-2. GRANT OF LICENSE
+  * Attribution — You must give appropriate credit, provide a link to the 
+    license, and indicate if changes were made. You may do so in any 
+    reasonable manner, but not in any way that suggests the licensor 
+    endorses you or your use.
 
-   Subject to the terms of this License, you are granted a worldwide,
-   royalty-free, non-exclusive license to:
-   
-   a) Use the Software for personal, educational, and non-commercial 
-      purposes only
-   b) Modify the Software and create derivative works
-   c) Distribute the Software and derivative works, provided that:
-      - This License is included with all distributions
-      - The same non-commercial restrictions apply
-      - Attribution to the original project is maintained
+  * NonCommercial — You may not use the material for commercial purposes.
+    This includes but is not limited to:
+    - Selling the Software or any derivative works
+    - Using the Software in a commercial product or service
+    - Using the Software to provide paid services
+    - Integrating the Software into commercial offerings
 
-3. RESTRICTIONS
+  * ShareAlike — If you remix, transform, or build upon the material, you 
+    must distribute your contributions under the same license as the original.
 
-   a) COMMERCIAL USE IS STRICTLY PROHIBITED
-   b) You may not sell, rent, lease, or sublicense the Software
-   c) You may not use the Software for any revenue-generating purpose
-   d) You may not remove or alter this License from any distribution
+  * No additional restrictions — You may not apply legal terms or 
+    technological measures that legally restrict others from doing anything 
+    the license permits.
 
-4. DISCLAIMER
+================================================================================
 
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-   EXPRESS OR IMPLIED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR
-   ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF
-   THE SOFTWARE.
+NOTICES:
 
-5. TERMINATION
+  * You do not have to comply with the license for elements of the material 
+    in the public domain or where your use is permitted by an applicable 
+    exception or limitation.
 
-   This License automatically terminates if you violate any of its terms.
-   Upon termination, you must destroy all copies of the Software.
+  * No warranties are given. The license may not give you all of the 
+    permissions necessary for your intended use. For example, other rights 
+    such as publicity, privacy, or moral rights may limit how you use the 
+    material.
 
----
+================================================================================
 
-For questions about commercial licensing, contact the project maintainers.
+DISCLAIMER:
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+For commercial licensing inquiries, please contact:
+  - GitHub: https://github.com/xiriovo/MultiFlash-Tool
+  - QQ Group: https://qm.qq.com/q/oCwGmTm5a2
+  - Email: 1708298587@qq.com

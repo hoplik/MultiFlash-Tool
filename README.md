@@ -7,7 +7,7 @@
   
   支持高通 EDL (9008) 模式和 Fastboot 模式
   
-  [![License](https://img.shields.io/badge/License-Non--Commercial-red.svg)](LICENSE)
+  [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
   [![.NET](https://img.shields.io/badge/.NET%20Framework-4.8-blue.svg)](https://dotnet.microsoft.com/)
   [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
   [![GitHub Stars](https://img.shields.io/github/stars/xiriovo/MultiFlash-Tool?style=social)](https://github.com/xiriovo/MultiFlash-Tool/stargazers)
