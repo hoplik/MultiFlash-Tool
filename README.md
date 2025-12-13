@@ -264,7 +264,8 @@
         <img src="https://github.com/Love-suannai.png" width="100" alt="Love-suannai"/><br>
         <sub><b>Love-suannai</b></sub>
       </a><br>
-      <a href="https://github.com/Love-suannai">GitHub</a>
+      <a href="https://github.com/Love-suannai">GitHub</a><br>
+      <span>QQ: 2863581329</span>
     </td>
   </tr>
 </table>
