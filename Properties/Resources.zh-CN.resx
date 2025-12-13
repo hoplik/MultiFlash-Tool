@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="0" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- 应用程序标题 -->
+  <data name="AppTitle" xml:space="preserve">
+    <value>MultiFlash Tool</value>
+  </data>
+  
+  <!-- 主菜单 -->
+  <data name="Menu_File" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="Menu_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Menu_Help" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="Menu_About" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="Menu_Exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="Menu_Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  
+  <!-- 设备状态 -->
+  <data name="Device_Connected" xml:space="preserve">
+    <value>设备已连接</value>
+  </data>
+  <data name="Device_Disconnected" xml:space="preserve">
+    <value>设备未连接</value>
+  </data>
+  <data name="Device_Detecting" xml:space="preserve">
+    <value>正在检测设备...</value>
+  </data>
+  <data name="Device_EDLMode" xml:space="preserve">
+    <value>EDL 模式 (9008)</value>
+  </data>
+  <data name="Device_FastbootMode" xml:space="preserve">
+    <value>Fastboot 模式</value>
+  </data>
+  <data name="Device_ADBMode" xml:space="preserve">
+    <value>ADB 模式</value>
+  </data>
+  
+  <!-- 按钮 -->
+  <data name="Btn_Start" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="Btn_Stop" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="Btn_Flash" xml:space="preserve">
+    <value>刷写</value>
+  </data>
+  <data name="Btn_Read" xml:space="preserve">
+    <value>读取</value>
+  </data>
+  <data name="Btn_Erase" xml:space="preserve">
+    <value>擦除</value>
+  </data>
+  <data name="Btn_Browse" xml:space="preserve">
+    <value>浏览...</value>
+  </data>
+  <data name="Btn_Refresh" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="Btn_Clear" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="Btn_Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Btn_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Btn_OK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="Btn_Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="Btn_No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  
+  <!-- 标签 -->
+  <data name="Label_Programmer" xml:space="preserve">
+    <value>Programmer:</value>
+  </data>
+  <data name="Label_Firmware" xml:space="preserve">
+    <value>固件:</value>
+  </data>
+  <data name="Label_Partition" xml:space="preserve">
+    <value>分区:</value>
+  </data>
+  <data name="Label_OutputDir" xml:space="preserve">
+    <value>输出目录:</value>
+  </data>
+  <data name="Label_Progress" xml:space="preserve">
+    <value>进度:</value>
+  </data>
+  <data name="Label_Status" xml:space="preserve">
+    <value>状态:</value>
+  </data>
+  <data name="Label_Log" xml:space="preserve">
+    <value>日志:</value>
+  </data>
+  
+  <!-- 选项卡 -->
+  <data name="Tab_EDL" xml:space="preserve">
+    <value>EDL 刷机</value>
+  </data>
+  <data name="Tab_Fastboot" xml:space="preserve">
+    <value>Fastboot</value>
+  </data>
+  <data name="Tab_Payload" xml:space="preserve">
+    <value>Payload 提取</value>
+  </data>
+  <data name="Tab_Tools" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="Tab_Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  
+  <!-- 消息 -->
+  <data name="Msg_Loading" xml:space="preserve">
+    <value>加载中...</value>
+  </data>
+  <data name="Msg_LoadingOK" xml:space="preserve">
+    <value>加载中...OK</value>
+  </data>
+  <data name="Msg_FlashSuccess" xml:space="preserve">
+    <value>刷写成功！</value>
+  </data>
+  <data name="Msg_FlashFailed" xml:space="preserve">
+    <value>刷写失败！</value>
+  </data>
+  <data name="Msg_OperationComplete" xml:space="preserve">
+    <value>操作完成</value>
+  </data>
+  <data name="Msg_OperationFailed" xml:space="preserve">
+    <value>操作失败</value>
+  </data>
+  <data name="Msg_Confirm" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="Msg_Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="Msg_Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Msg_Info" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  
+  <!-- QQ 群对话框 -->
+  <data name="QQGroup_Title" xml:space="preserve">
+    <value>加入官方社区</value>
+  </data>
+  <data name="QQGroup_Message" xml:space="preserve">
+    <value>欢迎使用 MultiFlash Tool！
+
+官方 QQ 交流群：MultiFlash TOOL
+是否立即加入群聊获取最新资讯和支持？</value>
+  </data>
+  <data name="QQGroup_Join" xml:space="preserve">
+    <value>加入 Q 群</value>
+  </data>
+  <data name="QQGroup_Later" xml:space="preserve">
+    <value>暂不加入</value>
+  </data>
+  <data name="QQGroup_OpenFailed" xml:space="preserve">
+    <value>无法打开 Q 群链接:</value>
+  </data>
+  
+  <!-- 设置 -->
+  <data name="Settings_Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="Settings_Theme" xml:space="preserve">
+    <value>主题</value>
+  </data>
+  <data name="Settings_AutoUpdate" xml:space="preserve">
+    <value>自动检查更新</value>
+  </data>
+  <data name="Settings_LogLevel" xml:space="preserve">
+    <value>日志级别</value>
+  </data>
+  
+  <!-- 关于 -->
+  <data name="About_Version" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="About_Copyright" xml:space="preserve">
+    <value>版权所有 © 2025 MultiFlash Tool Team</value>
+  </data>
+  <data name="About_License" xml:space="preserve">
+    <value>基于 CC BY-NC-SA 4.0 许可证</value>
+  </data>
+  <data name="About_Website" xml:space="preserve">
+    <value>官网</value>
+  </data>
+  
+</root>

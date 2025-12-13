@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="0" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Application Title -->
+  <data name="AppTitle" xml:space="preserve">
+    <value>MultiFlash Tool</value>
+  </data>
+  
+  <!-- Main Menu -->
+  <data name="Menu_File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Menu_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Menu_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Menu_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Menu_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Menu_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  
+  <!-- Device Status -->
+  <data name="Device_Connected" xml:space="preserve">
+    <value>Device Connected</value>
+  </data>
+  <data name="Device_Disconnected" xml:space="preserve">
+    <value>Device Disconnected</value>
+  </data>
+  <data name="Device_Detecting" xml:space="preserve">
+    <value>Detecting Device...</value>
+  </data>
+  <data name="Device_EDLMode" xml:space="preserve">
+    <value>EDL Mode (9008)</value>
+  </data>
+  <data name="Device_FastbootMode" xml:space="preserve">
+    <value>Fastboot Mode</value>
+  </data>
+  <data name="Device_ADBMode" xml:space="preserve">
+    <value>ADB Mode</value>
+  </data>
+  
+  <!-- Buttons -->
+  <data name="Btn_Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Btn_Stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="Btn_Flash" xml:space="preserve">
+    <value>Flash</value>
+  </data>
+  <data name="Btn_Read" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="Btn_Erase" xml:space="preserve">
+    <value>Erase</value>
+  </data>
+  <data name="Btn_Browse" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="Btn_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Btn_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Btn_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Btn_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Btn_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Btn_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Btn_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  
+  <!-- Labels -->
+  <data name="Label_Programmer" xml:space="preserve">
+    <value>Programmer:</value>
+  </data>
+  <data name="Label_Firmware" xml:space="preserve">
+    <value>Firmware:</value>
+  </data>
+  <data name="Label_Partition" xml:space="preserve">
+    <value>Partition:</value>
+  </data>
+  <data name="Label_OutputDir" xml:space="preserve">
+    <value>Output Directory:</value>
+  </data>
+  <data name="Label_Progress" xml:space="preserve">
+    <value>Progress:</value>
+  </data>
+  <data name="Label_Status" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="Label_Log" xml:space="preserve">
+    <value>Log:</value>
+  </data>
+  
+  <!-- Tabs -->
+  <data name="Tab_EDL" xml:space="preserve">
+    <value>EDL Flash</value>
+  </data>
+  <data name="Tab_Fastboot" xml:space="preserve">
+    <value>Fastboot</value>
+  </data>
+  <data name="Tab_Payload" xml:space="preserve">
+    <value>Payload Extract</value>
+  </data>
+  <data name="Tab_Tools" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="Tab_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  
+  <!-- Messages -->
+  <data name="Msg_Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="Msg_LoadingOK" xml:space="preserve">
+    <value>Loading...OK</value>
+  </data>
+  <data name="Msg_FlashSuccess" xml:space="preserve">
+    <value>Flash completed successfully!</value>
+  </data>
+  <data name="Msg_FlashFailed" xml:space="preserve">
+    <value>Flash failed!</value>
+  </data>
+  <data name="Msg_OperationComplete" xml:space="preserve">
+    <value>Operation completed</value>
+  </data>
+  <data name="Msg_OperationFailed" xml:space="preserve">
+    <value>Operation failed</value>
+  </data>
+  <data name="Msg_Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Msg_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Msg_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Msg_Info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  
+  <!-- QQ Group Dialog -->
+  <data name="QQGroup_Title" xml:space="preserve">
+    <value>Join Official Community</value>
+  </data>
+  <data name="QQGroup_Message" xml:space="preserve">
+    <value>Welcome to MultiFlash Tool!
+
+Official QQ Group: MultiFlash TOOL
+Would you like to join the group for latest news and support?</value>
+  </data>
+  <data name="QQGroup_Join" xml:space="preserve">
+    <value>Join QQ Group</value>
+  </data>
+  <data name="QQGroup_Later" xml:space="preserve">
+    <value>Not Now</value>
+  </data>
+  <data name="QQGroup_OpenFailed" xml:space="preserve">
+    <value>Failed to open QQ group link:</value>
+  </data>
+  
+  <!-- Settings -->
+  <data name="Settings_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Settings_Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Settings_AutoUpdate" xml:space="preserve">
+    <value>Auto Check Updates</value>
+  </data>
+  <data name="Settings_LogLevel" xml:space="preserve">
+    <value>Log Level</value>
+  </data>
+  
+  <!-- About -->
+  <data name="About_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="About_Copyright" xml:space="preserve">
+    <value>Copyright © 2025 MultiFlash Tool Team</value>
+  </data>
+  <data name="About_License" xml:space="preserve">
+    <value>Licensed under CC BY-NC-SA 4.0</value>
+  </data>
+  <data name="About_Website" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  
+</root>

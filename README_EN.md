@@ -66,7 +66,7 @@
 
 ## ⚠️ License Notice
 
-This project is licensed under a **Non-Commercial License**. **Any form of commercial use is prohibited.**
+This project is licensed under **CC BY-NC-SA 4.0** (Creative Commons Attribution-NonCommercial-ShareAlike 4.0). **Any form of commercial use is prohibited.**
 
 - ❌ No selling
 - ❌ No use in commercial products
@@ -106,7 +106,7 @@ This project is licensed under a **Non-Commercial License**. **Any form of comme
 
 - 🔐 **Security Authentication** - Cloud authorization verification
 - 📝 **Detailed Logging** - Operation log recording and export
-- 🌐 **Multi-language Support** - Chinese interface
+- 🌐 **Multi-language Support** - Chinese & English interface
 - 🎨 **Modern UI** - Based on AntdUI framework
 
 ## 📋 System Requirements
@@ -225,12 +225,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for complete contribution guidelines.
 
 ## 📄 License
 
-This project is licensed under a **Non-Commercial License** - see [LICENSE](LICENSE) file
+This project is licensed under **[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)** - see [LICENSE](LICENSE) file
 
-- ✅ Allowed for personal learning and research
-- ✅ Can be modified and distributed (must maintain same license)
-- ❌ Prohibited for any commercial use
-- ❌ Prohibited from selling or using for profit
+- ✅ **Share** — Copy and redistribute in any medium or format
+- ✅ **Adapt** — Remix, transform, and build upon the material
+- ⚠️ **Attribution** — Must give appropriate credit
+- ⚠️ **ShareAlike** — Must use the same license for derivatives
+- ❌ **NonCommercial** — No commercial use allowed
 
 ## 🌟 Star History
 
@@ -284,5 +285,5 @@ If this project helps you, please give it a Star ⭐
 <div align="center">
   Made with ❤️ by MultiFlash Tool Team
   <br>
-  Copyright © 2024 MultiFlash Tool. All rights reserved.
+  Copyright © 2025 MultiFlash Tool Team. Licensed under CC BY-NC-SA 4.0.
 </div>
