@@ -42,22 +42,22 @@
 <table>
   <tr>
     <td align="center">
-      <img src="https://img.icons8.com/fluency/96/000000/speed.png" width="60"/><br>
+      <h1>🚀</h1><br>
       <b>Efficient & Stable</b><br>
       Optimized flashing<br>Resume support
     </td>
     <td align="center">
-      <img src="https://img.icons8.com/fluency/96/000000/easy.png" width="60"/><br>
+      <h1>⚡</h1><br>
       <b>Easy to Use</b><br>
       GUI interface<br>One-click operation
     </td>
     <td align="center">
-      <img src="https://img.icons8.com/fluency/96/000000/module.png" width="60"/><br>
+      <h1>🛠️</h1><br>
       <b>Full-Featured</b><br>
       EDL + Fastboot<br>Firmware toolkit
     </td>
     <td align="center">
-      <img src="https://img.icons8.com/fluency/96/000000/open-source.png" width="60"/><br>
+      <h1>📖</h1><br>
       <b>Open Source</b><br>
       Fully open<br>Active updates
     </td>

@@ -42,22 +42,22 @@
 <table>
   <tr>
     <td align="center">
-      <img src="https://img.icons8.com/fluency/96/000000/speed.png" width="60"/><br>
+      <h1>🚀</h1><br>
       <b>高效稳定</b><br>
       优化的刷写算法<br>支持断点续传
     </td>
     <td align="center">
-      <img src="https://img.icons8.com/fluency/96/000000/easy.png" width="60"/><br>
+      <h1>⚡</h1><br>
       <b>简单易用</b><br>
       图形化界面<br>一键操作
     </td>
     <td align="center">
-      <img src="https://img.icons8.com/fluency/96/000000/module.png" width="60"/><br>
+      <h1>🛠️</h1><br>
       <b>功能全面</b><br>
       EDL + Fastboot<br>固件工具集
     </td>
     <td align="center">
-      <img src="https://img.icons8.com/fluency/96/000000/open-source.png" width="60"/><br>
+      <h1>📖</h1><br>
       <b>开源免费</b><br>
       完全开源<br>持续更新
     </td>
