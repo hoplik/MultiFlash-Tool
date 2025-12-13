@@ -249,10 +249,27 @@
 - **Discord**: [加入服务器](https://discord.gg/your-invite) <!-- 请替换为实际的 Discord 链接 -->
 
 ### 开发者联系
-- **项目维护者**: 
-  - [@xiriovo](https://github.com/xiriovo)
-  - [@Love-suannai](https://github.com/Love-suannai)
-- **邮箱**: 1708298587@qq.com
+
+<table align="center">
+  <tr>
+    <td align="center" width="150">
+      <a href="https://github.com/xiriovo">
+        <img src="https://github.com/xiriovo.png" width="100" alt="xiriovo"/><br>
+        <sub><b>xiriovo</b></sub>
+      </a><br>
+      <a href="https://github.com/xiriovo">GitHub</a>
+    </td>
+    <td align="center" width="150">
+      <a href="https://github.com/Love-suannai">
+        <img src="https://github.com/Love-suannai.png" width="100" alt="Love-suannai"/><br>
+        <sub><b>Love-suannai</b></sub>
+      </a><br>
+      <a href="https://github.com/Love-suannai">GitHub</a>
+    </td>
+  </tr>
+</table>
+
+- **官方邮箱**: 1708298587@qq.com
 
 ### 关注我们
 - **GitHub**: [Star 本项目](https://github.com/xiriovo/MultiFlash-Tool)

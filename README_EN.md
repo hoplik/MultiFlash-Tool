@@ -249,9 +249,26 @@ If this project helps you, please give it a Star ⭐
 - **Discord**: [Join Server](https://discord.gg/your-invite) <!-- Replace with actual Discord link -->
 
 ### Developer Contact
-- **Maintainers**: 
-  - [@xiriovo](https://github.com/xiriovo)
-  - [@Love-suannai](https://github.com/Love-suannai)
+
+<table align="center">
+  <tr>
+    <td align="center" width="150">
+      <a href="https://github.com/xiriovo">
+        <img src="https://github.com/xiriovo.png" width="100" alt="xiriovo"/><br>
+        <sub><b>xiriovo</b></sub>
+      </a><br>
+      <a href="https://github.com/xiriovo">GitHub</a>
+    </td>
+    <td align="center" width="150">
+      <a href="https://github.com/Love-suannai">
+        <img src="https://github.com/Love-suannai.png" width="100" alt="Love-suannai"/><br>
+        <sub><b>Love-suannai</b></sub>
+      </a><br>
+      <a href="https://github.com/Love-suannai">GitHub</a>
+    </td>
+  </tr>
+</table>
+
 - **Email**: 1708298587@qq.com
 
 ### Follow Us
