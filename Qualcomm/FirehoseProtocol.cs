@@ -93,8 +93,8 @@ namespace OPFlashTool.Qualcomm
             _sectorSize = (StorageType == "emmc") ? 512 : 4096;
             
             // [修复] 增加 EnableFlash="1" 和 ZlpAwareHost="1" 以解决 "Mode= Invalid value" 和 "EnableFlash not found" 错误
-            // 设置 ZlpAwareHost="0" 避免设备等待主机 ZLP（SerialPort 无法发送 ZLP）
-            string xml = $"<?xml version=\"1.0\" ?><data><configure MemoryName=\"{storageType}\" Verbose=\"0\" AlwaysValidate=\"0\" MaxPayloadSizeToTargetInBytes=\"{_maxPayloadSize}\" ZlpAwareHost=\"0\" SkipStorageInit=\"0\" CheckDevinfo=\"0\" EnableFlash=\"1\" /></data>";
+            // 参考项目使用 ZlpAwareHost="1"，与设备保持一致
+            string xml = $"<?xml version=\"1.0\" ?><data><configure MemoryName=\"{storageType}\" Verbose=\"0\" AlwaysValidate=\"0\" MaxPayloadSizeToTargetInBytes=\"{_maxPayloadSize}\" ZlpAwareHost=\"1\" SkipStorageInit=\"0\" CheckDevinfo=\"0\" EnableFlash=\"1\" /></data>";
             
             byte[] data = Encoding.UTF8.GetBytes(xml);
             _port.Write(data, 0, data.Length);
