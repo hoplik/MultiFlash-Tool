@@ -13,8 +13,8 @@
     <AssemblyName>MultiFlash Tool</AssemblyName>
     <RootNamespace>OPFlashTool</RootNamespace>
     
-    <!-- 应用程序图标 (请将 logo.jpg 转换为 icon.ico 后取消注释) -->
-    <!-- <ApplicationIcon>assets\icon.ico</ApplicationIcon> -->
+    <!-- 应用程序图标 -->
+    <ApplicationIcon>logo.ico</ApplicationIcon>
     
     <!-- 版权和程序集信息 -->
     <Product>MultiFlash Tool</Product>
