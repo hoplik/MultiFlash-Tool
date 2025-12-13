@@ -10,11 +10,24 @@ using OPFlashTool.Strategies;
 
 namespace OPFlashTool.Services
 {
+    /// <summary>
+    /// 进度上下文 - 用于传递 UI 控件引用
+    /// </summary>
+    public class ProgressContext
+    {
+        public AntdUI.Progress ProgressPrimary { get; set; }    // 主进度条 (总进度)
+        public AntdUI.Progress ProgressSecondary { get; set; }  // 副进度条 (当前任务)
+        public AntdUI.Label SpeedLabel { get; set; }            // 速度标签
+        public AntdUI.Label TimeLabel { get; set; }             // 时间标签
+        public AntdUI.Input StatusInput { get; set; }           // 状态输入框
+    }
+
     public class FlashTaskExecutor
     {
         public FirehoseClient Client { get; }
         private Action<string> _log;
-        private IDeviceStrategy _strategy; 
+        private IDeviceStrategy _strategy;
+        private ProgressContext _context;
 
         public int SectorSize { get; }
 
@@ -23,19 +36,106 @@ namespace OPFlashTool.Services
         public event Action<int, int> TaskProgressChanged; // 总任务进度 (当前个/总个数)
         public event Action<string> StatusChanged; // 状态栏文字
 
-        public FlashTaskExecutor(FirehoseClient client, IDeviceStrategy strategy, Action<string> log, int sectorSize)
+        public FlashTaskExecutor(FirehoseClient client, IDeviceStrategy strategy, Action<string> log, int sectorSize, ProgressContext context = null)
         {
             Client = client;
             _strategy = strategy;
             _log = log;
             SectorSize = sectorSize;
+            _context = context;
         }
 
-        // 云端功能已移除 - 进度通过事件通知
+        // [核心优化] 统一进度更新逻辑，支持 Sparse 展开尺寸的批量统计
         private void UpdateProgress(long current, long total, bool isSingleTask, long batchProcessed = 0, long batchTotal = 0, Stopwatch sw = null)
         {
             // 触发进度事件供 UI 层处理
             ProgressChanged?.Invoke(current, total);
+
+            if (_context == null) return;
+
+            float currentPercent = (total > 0) ? (float)current / total : 0;
+            if (currentPercent > 1) currentPercent = 1;
+            if (currentPercent < 0) currentPercent = 0;
+
+            // 副进度条（当前任务）
+            if (_context.ProgressSecondary != null)
+            {
+                if (_context.ProgressSecondary.InvokeRequired)
+                {
+                    _context.ProgressSecondary.Invoke(new Action(() =>
+                    {
+                        _context.ProgressSecondary.Value = currentPercent;
+                    }));
+                }
+                else
+                {
+                    _context.ProgressSecondary.Value = currentPercent;
+                }
+            }
+
+            // 计算总进度
+            float totalPercent = 0;
+            if (isSingleTask)
+            {
+                totalPercent = currentPercent;
+            }
+            else
+            {
+                long totalCurrentBytes = batchProcessed + current;
+                totalPercent = (batchTotal > 0) ? (float)totalCurrentBytes / batchTotal : 0;
+            }
+
+            if (totalPercent > 1) totalPercent = 1;
+            if (totalPercent < 0) totalPercent = 0;
+
+            // 主进度条（总进度）
+            if (_context.ProgressPrimary != null)
+            {
+                if (_context.ProgressPrimary.InvokeRequired)
+                    _context.ProgressPrimary.Invoke(new Action(() => _context.ProgressPrimary.Value = totalPercent));
+                else
+                    _context.ProgressPrimary.Value = totalPercent;
+            }
+
+            // 速度显示
+            if (sw != null && _context.SpeedLabel != null)
+            {
+                double seconds = sw.Elapsed.TotalSeconds;
+                if (seconds > 0.2)
+                {
+                    double speedBytes = current / seconds;
+                    string speedStr = $"速度：{FormatSpeed(speedBytes)}";
+
+                    if (_context.SpeedLabel.InvokeRequired)
+                        _context.SpeedLabel.Invoke(new Action(() => _context.SpeedLabel.Text = speedStr));
+                    else
+                        _context.SpeedLabel.Text = speedStr;
+                }
+            }
+
+            // 时间显示
+            if (sw != null && _context.TimeLabel != null)
+            {
+                TimeSpan elapsed = sw.Elapsed;
+                string timeStr = $"时间：{elapsed.Minutes:D2}:{elapsed.Seconds:D2}";
+
+                if (_context.TimeLabel.InvokeRequired)
+                    _context.TimeLabel.Invoke(new Action(() => _context.TimeLabel.Text = timeStr));
+                else
+                    _context.TimeLabel.Text = timeStr;
+            }
+
+            // 状态显示
+            if (_context.StatusInput != null)
+            {
+                int percentDisplay = (int)(totalPercent * 100);
+                string statusStr = percentDisplay >= 100 ? "状态：操作完成" : $"状态：{percentDisplay}%";
+
+                if (_context.StatusInput.InvokeRequired)
+                    _context.StatusInput.Invoke(new Action(() => _context.StatusInput.Text = statusStr));
+                else
+                    _context.StatusInput.Text = statusStr;
+            }
         }
 
         private string FormatSpeed(double bytesPerSec)

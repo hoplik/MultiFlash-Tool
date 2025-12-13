@@ -60,7 +60,8 @@ namespace OPFlashTool.Qualcomm
             Func<FlashTaskExecutor, Task> flashAction,
             CancellationToken ct = default,
             Func<string, string> inputRequestCallback = null,
-            string preferredStorageType = "Auto")
+            string preferredStorageType = "Auto",
+            ProgressContext progressContext = null)
         {
             // 1. 获取策略对象
             IDeviceStrategy strategy = GetDeviceStrategy(authType);
@@ -327,27 +328,11 @@ namespace OPFlashTool.Qualcomm
 
                     _log($"[就绪] 设备连接成功 ({storageType.ToUpper()})");
 
-                    // [新增] 激活 LUN 逻辑 (EMMC=0, UFS=1)
-                    // 注意：这通常只在需要时调用，但如果用户要求“激活LUN...根据UI选择”，
-                    // 这里我们只是配置了 Firehose。具体的 SetBootLun 应该由上层 flashAction 决定是否调用，
-                    // 或者我们在这里默认设置？
-                    // 用户说 "激活lun分为EMMC激活0ufs激活默认1...配置设备也是如此"
-                    // 这可能意味着 Configure 之后应该 SetBootLun。
-                    // 但 SetBootLun 是修改启动分区，可能会变砖。
-                    // 只有在 "激活LUN" 操作时才应该调用。
-                    // 所以这里不自动调用 SetBootLun。
-
                     // 5. 执行任务
                     if (flashAction != null)
                     {
-                        // 创建执行器
-                        var executor = new FlashTaskExecutor(firehose, strategy, _log, firehose.SectorSize);
-                        
-                        // [核心修复] 正确挂载进度事件
-                        // 将底层 executor 的事件转发给 UI 传进来的 progressCallback
-                        // 注意：FlashTaskExecutor 现在直接使用 context 更新 UI，这里不需要再转发了
-                        // 但为了兼容性，如果 progressCallback 仍然被使用（例如非 CloudContext 场景），可以保留
-                        // 不过我们已经修改了 RunFlashActionAsync 签名，progressCallback 已经移除了
+                        // 创建执行器，传入进度上下文
+                        var executor = new FlashTaskExecutor(firehose, strategy, _log, firehose.SectorSize, progressContext);
 
                         // 执行具体的刷写逻辑
                         await flashAction(executor);
