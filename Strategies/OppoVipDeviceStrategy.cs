@@ -78,22 +78,22 @@ namespace OPFlashTool.Strategies
                 {
                     byte[]? data = null;
 
-                    // 0. [新增] 尝试使用 gpt_main{lun}.bin 伪装 (对应 LUN 0-5)
-                    // SM8550+ 设备可能只允许 gpt_main{lun}.bin 读取 LBA 0-34
+                    // 0. [优先] 尝试使用 BackupGPT 伪装 (参考项目的成功策略)
+                    // 使用 gpt_backup{lun}.bin 文件名伪装读取 Sector 0 (主 GPT 位置)
                     try 
                     {
                         data = await client.ReadGptPacketAsync(
                             lun.ToString(), 
                             0, 
                             sectorsToRead, 
-                            $"gpt_main{lun}.bin", 
-                            $"gpt_main{lun}.bin", 
+                            "BackupGPT", 
+                            $"gpt_backup{lun}.bin", 
                             ct
                         );
                     }
                     catch {}
 
-                    // 1. 尝试使用 gpt_backup{lun}.bin 伪装 (参考项目的成功策略)
+                    // 1. 如果 BackupGPT 失败，尝试 gpt_main{lun}.bin
                     if (data == null)
                     {
                         try 
@@ -102,8 +102,8 @@ namespace OPFlashTool.Strategies
                                 lun.ToString(), 
                                 0, 
                                 sectorsToRead, 
-                                "BackupGPT", 
-                                $"gpt_backup{lun}.bin", 
+                                $"gpt_main{lun}.bin", 
+                                $"gpt_main{lun}.bin", 
                                 ct
                             );
                         }
@@ -140,15 +140,15 @@ namespace OPFlashTool.Strategies
                             {
                                 log($"[GPT] 尝试读取 Backup GPT @ {startSector} (Total: {totalSectors})...");
                                 
-                                // 尝试 Backup GPT (顺序: main -> backup -> ssd)
+                                // 尝试 Backup GPT (顺序: backup -> main -> ssd)
                                 try
                                 {
                                     data = await client.ReadGptPacketAsync(
                                         lun.ToString(),
                                         startSector,
                                         sectorsToRead,
-                                        $"gpt_main{lun}.bin", 
-                                        $"gpt_main{lun}.bin",
+                                        "BackupGPT", 
+                                        $"gpt_backup{lun}.bin",
                                         ct
                                     );
                                 }
@@ -162,8 +162,8 @@ namespace OPFlashTool.Strategies
                                             lun.ToString(),
                                             startSector,
                                             sectorsToRead,
-                                            "BackupGPT", 
-                                            $"gpt_backup{lun}.bin", 
+                                            $"gpt_main{lun}.bin", 
+                                            $"gpt_main{lun}.bin", 
                                             ct
                                         );
                                     }
